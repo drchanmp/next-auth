@@ -48,13 +48,17 @@ const storage = createStorage({
     : memoryDriver(),
 })
 
+export const { handlers, signIn, signOut, auth } = NextAuth({
+  providers: [GitHub],
+})
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   debug: !!process.env.AUTH_DEBUG,
   theme: { logo: "https://authjs.dev/img/logo-sm.png" },
   adapter: UnstorageAdapter(storage),
   providers: [
     Apple,
-    // Atlassian,
+    Atlassian,
     Auth0,
     AzureB2C,
     BankIDNorway,
