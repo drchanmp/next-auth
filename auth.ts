@@ -2,7 +2,7 @@ import NextAuth from "next-auth"
 import "next-auth/jwt"
 
 import Apple from "next-auth/providers/apple"
-// import Atlassian from "next-auth/providers/atlassian"
+import Atlassian from "next-auth/providers/atlassian"
 import Auth0 from "next-auth/providers/auth0"
 import AzureB2C from "next-auth/providers/azure-ad-b2c"
 import BankIDNorway from "next-auth/providers/bankid-no"
